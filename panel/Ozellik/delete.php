@@ -1,7 +1,7 @@
 <?php 
 require_once("../../config/baglan.php");
 $oku=$_REQUEST['oku'];
-$sql="delete from admin where AdminId='$oku'";
+$sql="delete from Ozellikler where OzelId='$oku'";
 $result=mysqli_query($conn,$sql);
 if($result>0)
 {

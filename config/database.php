@@ -8,21 +8,25 @@ class database{
 
 public function __construct()
 {
-   $this->conn = mysqli_connect($servername, $username, $password,$db);
+   $this->conn = mysqli_connect($this->servername, $this->username, $this->password,$this->db);
     
     // Check connection
-    if (!$conn) {
+    if (!$this->conn) {
       die("Connection failed: " . mysqli_connect_error());
     }
 }
-public function Ekle($deger,$tablo)
+public function Ekle($kolon,$deger,$tablo)
 {
     try{
-        $sql="insert into ".$tablo." values (".$deger.")";
+        $sql="insert into  ". $tablo ." (". $kolon .")  values (".$deger.")";
         $result=mysqli_query($this->conn,$sql);
-        if(mysqli_num_rows($result)>0)
+        if($result)
           {
             echo "Kayıt Başarılı";
+          }
+          else
+          {
+            echo "Kayıt Hatası";
           }
       }
    catch(Expection $e)
@@ -35,11 +39,15 @@ public function Ekle($deger,$tablo)
 public function Duzelt($tablo,$veriler,$gelen)
 {
     try{
-      $sql="update ".$tablo. " set ".$veriler." where". $gelen;
+      echo $sql="update ".$tablo. " set ".$veriler." where ". $gelen;
       $result=mysqli_query($this->conn,$sql);
-      if(mysqli_num_rows($result)>0)
+      if($result)
       {
         echo "Kayıt Düzeltildi";
+      }
+      else
+      {
+        echo "Kayıt Hatası";
       }
     }
     catch(Expection $e)
@@ -47,14 +55,18 @@ public function Duzelt($tablo,$veriler,$gelen)
         echo "Hata Oluştu".$e;
     }
 }
-public function Silme($tablo,$veriler,$gelen)
+public function Silme($tablo, $gelen)
 {
     try{
-      $sql="delete from ".$tablo." where". $gelen;
+      $sql="delete from ".$tablo." where ". $gelen;
       $result=mysqli_query($this->conn,$sql);
-      if(mysqli_num_rows($result)>0)
+      if($result)
       {
         echo "Kayıt Silindi";
+      }
+      else
+      {
+        echo "Kayıt Hatası";
       }
     }
     catch(Expection $e)
@@ -66,9 +78,9 @@ public function Silme($tablo,$veriler,$gelen)
 public function TListele($tablo)
 {
     try{
-      $sql="Select * from ".$tablo.;
+      $sql="Select * from ".$tablo;
       $result=mysqli_query($this->conn,$sql);
-      if(mysqli_num_rows($result)>0)
+      if($result)
       {
         echo "Kayıt Silindi";
       }
@@ -83,7 +95,7 @@ public function ListeleTek($tablo,$gelen)
     try{
       $sql="Select * from ".$tablo. " where ".$gelen;
       $result=mysqli_query($this->conn,$sql);
-      if(mysqli_num_rows($result)>0)
+      if($result)
       {
         echo "Kayıt Silindi";
       }

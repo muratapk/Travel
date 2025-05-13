@@ -1,9 +1,9 @@
 <?php 
 require_once("../../config/baglan.php");
-$sql="Select * from Ozellikler";
+echo $sql="Select * from otelozellik";
 $result = mysqli_query($conn, $sql);
 //veritabanında sorgu çalışmak için kullanıyor
-if(mysqli_num_rows($result)>0)
+if($result)
 {
 
 }
