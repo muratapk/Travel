@@ -1,3 +1,13 @@
+<?php
+session_start();
+if(!isset($_SESSION['Kul']) || empty($_SESSION['Kul']))
+ {
+  echo "<script>
+     window.location.href='Login/index.php'
+  </script>";
+ }
+?>
+
 <!doctype html>
 <html lang="en" data-bs-theme="auto">
   <head>
@@ -266,15 +276,15 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link d-flex align-items-center gap-2" href="main.php?sayfa=urunler">
+              <a class="nav-link d-flex align-items-center gap-2" href="main.php?sayfa=Oda/index">
                 <svg class="bi" aria-hidden="true"><use xlink:href="#cart"/></svg>
-                Ürünler
+                Oda
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link d-flex align-items-center gap-2" href="#">
+              <a class="nav-link d-flex align-items-center gap-2" href="main.php?sayfa=OtelOzellik/index">
                 <svg class="bi" aria-hidden="true"><use xlink:href="#people"/></svg>
-                Customers
+                Otel Özellik
               </a>
             </li>
             <li class="nav-item">
@@ -334,9 +344,9 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link d-flex align-items-center gap-2" href="#">
+              <a class="nav-link d-flex align-items-center gap-2" href="guvenli.php">
                 <svg class="bi" aria-hidden="true"><use xlink:href="#door-closed"/></svg>
-                Sign out
+                Güvenli Çıkış
               </a>
             </li>
           </ul>
@@ -356,7 +366,15 @@
 Swal.fire("SweetAlert2 is working!");
 </script>
 <script>
-$(document).ready(function(){});
+$(document).ready(function(){
+  $(".nav-item a").click(function(){
+    
+   let yol=$(this).attr("href");
+   alert(yol);
+  })
+
+
+});
 </script>
 
     <script defer src="https://cdn.jsdelivr.net/npm/chart.js@4.3.2/dist/chart.umd.js" integrity="sha384-eI7PSr3L1XLISH8JdDII5YN/njoSsxfbrkCTnJrzXt+ENP5MOVBxD+l6sEG4zoLp" crossorigin="anonymous"></script><script defer src="dashboard.js"></script></body>
