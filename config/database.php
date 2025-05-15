@@ -82,7 +82,7 @@ public function TListele($tablo)
       $result=mysqli_query($this->conn,$sql);
       if($result)
       {
-        echo "Kayıt Silindi";
+        return $result ?$result->fetch_all(MYSQLI_ASSOC):null; 
       }
     }
     catch(Expection $e)
@@ -97,7 +97,7 @@ public function ListeleTek($tablo,$gelen)
       $result=mysqli_query($this->conn,$sql);
       if($result)
       {
-        echo "Kayıt Silindi";
+        return $result ? $result->fetch_assoc():null;
       }
     }
     catch(Expection $e)
