@@ -3,7 +3,7 @@ class database{
  private   $servername = "localhost";
  private   $username = "root";
  private   $password = "";
- private   $db="traveldb";
+ private   $db="trevaldb";
  private   $conn;
 
 public function __construct()
@@ -82,7 +82,7 @@ public function TListele($tablo)
       $result=mysqli_query($this->conn,$sql);
       if($result)
       {
-        return $result ?$result->fetch_all(MYSQLI_ASSOC):null; 
+          return $result ?$result->fetch=all (MYSQLI_ASSOC):null;
       }
     }
     catch(Expection $e)
@@ -97,7 +97,7 @@ public function ListeleTek($tablo,$gelen)
       $result=mysqli_query($this->conn,$sql);
       if($result)
       {
-        return $result ? $result->fetch_assoc():null;
+        return $result ?$result->fetch_assoch():null;
       }
     }
     catch(Expection $e)

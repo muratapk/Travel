@@ -170,20 +170,20 @@ require_once("../config/baglan.php");
 
     
 <main class="form-signin w-100 m-auto">
-
   <div class="container">
-      <div class="row">
-         <div class="col-md-8">
-         <form method="post" action="login.php">
+    <div class="row">
+    <div class="col-md-8">
+
+    <form method="post" action="login.php">
     <img class="mb-4" src="assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
     <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
 
     <div class="form-floating">
-      <input type="text" class="form-control" id="floatingInput" name="kul" placeholder="Kullanıcı Adını Girin:">
+      <input type="text" class="form-control" id="floatingInput" name="kul" placeholder="Kullanıcı Adını Girin">
       <label for="floatingInput">Kullanıcı Adı</label>
     </div>
     <div class="form-floating">
-      <input type="password" class="form-control" name="sifre" id="floatingPassword" placeholder="Şifre">
+      <input type="password" class="form-control" id="floatingPassword" name="sifre" placeholder="Şifre">
       <label for="floatingPassword">Şifre Giriniz</label>
     </div>
 
@@ -196,12 +196,10 @@ require_once("../config/baglan.php");
     <button class="btn btn-primary w-100 py-2" type="submit">Giriş</button>
     <p class="mt-5 mb-3 text-body-secondary">&copy; 2017–2025</p>
   </form>
-         
-         </div>
-     </div>
-  </div>
-
-
+    </div>
+      </div>
+    </div>
+    
 
 </main>
 <script defer src="assets/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"></script>

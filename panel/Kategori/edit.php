@@ -6,14 +6,14 @@ $result=mysqli_query($conn,$sql);
 $row=mysqli_fetch_assoc($result);
 ?>
 <form method="post" action="update.php">
-    <input type="hidden" value="<?php echo $row['KategoriId'];?>" name="KateogriId"/>
+    <input type="hidden" value="<?php echo $row['KategoriId'];?>" name="KategoriId"/>
     <div class="form-group row">
       <label for="kul" class="col-4 col-form-label">Kategori Girin</label> 
       <div class="col-8">
-        <input id="kul" name="KategoriAdi" value="<?php echo $row['KategoriAdi'];?>" placeholder="Kategori Adı Girin" type="text" class="form-control">
+        <input id="kul" name="KategoriAdi" value="<?php echo $row['KategoriId'];?>" placeholder="Kategori Adı Girin" type="text" class="form-control">
       </div>
     </div>
-   
+    
     
     
     <div class="form-group row">

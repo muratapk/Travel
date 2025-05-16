@@ -1,11 +1,11 @@
 <?php
 session_start();
 if(!isset($_SESSION['Kul']) || empty($_SESSION['Kul']))
- {
+{
   echo "<script>
-     window.location.href='Login/index.php'
+  window.location.href='Login/index.php'
   </script>";
- }
+}
 ?>
 
 <!doctype html>
@@ -266,7 +266,7 @@ if(!isset($_SESSION['Kul']) || empty($_SESSION['Kul']))
             <li class="nav-item">
               <a class="nav-link d-flex align-items-center gap-2 active" aria-current="page" href="main.php?sayfa=Admin/index">
                 <svg class="bi" aria-hidden="true"><use xlink:href="#house-fill"/></svg>
-               Admin
+                Admin
               </a>
             </li>
             <li class="nav-item">
@@ -284,7 +284,7 @@ if(!isset($_SESSION['Kul']) || empty($_SESSION['Kul']))
             <li class="nav-item">
               <a class="nav-link d-flex align-items-center gap-2" href="main.php?sayfa=OtelOzellik/index">
                 <svg class="bi" aria-hidden="true"><use xlink:href="#people"/></svg>
-                Otel Özellik
+                Otel Ozellik
               </a>
             </li>
             <li class="nav-item">
@@ -355,27 +355,27 @@ if(!isset($_SESSION['Kul']) || empty($_SESSION['Kul']))
     </div>
 
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-      <?php require_once("orta.php");?>
+     <?php require_once("orta.php");?>
     </main>
   </div>
 </div>
 <script defer src="assets/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"></script>
-<script src="../js/jquery-3.7.1.js"></script>
+<script src="../js/jquary-3.7.1.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
 Swal.fire("SweetAlert2 is working!");
 </script>
 <script>
-$(document).ready(function(){
-  $(".nav-item a").click(function(){
-    
-   let yol=$(this).attr("href");
-   alert(yol);
-  })
+  $(document).ready(function(){}{
+    $(".nav-item a").click(function(){
+      
+     let yol=$(this).attr("href");
+     alert(yol);
+    })
 
 
-});
+  });
+
 </script>
-
     <script defer src="https://cdn.jsdelivr.net/npm/chart.js@4.3.2/dist/chart.umd.js" integrity="sha384-eI7PSr3L1XLISH8JdDII5YN/njoSsxfbrkCTnJrzXt+ENP5MOVBxD+l6sEG4zoLp" crossorigin="anonymous"></script><script defer src="dashboard.js"></script></body>
 </html>

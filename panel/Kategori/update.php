@@ -1,9 +1,10 @@
 <?php
 require_once("../../config/baglan.php");
-$KategoriId = $_POST['KategoriId'];
+$KategoriId= $_POST['KategoriId'];
 $KategoriAdi = $_POST['KategoriAdi'];
 
-$sql = "update kategori set KategoriAdi='$KategoriAdi' where KategoriId='$KategoriId'";
+
+$sql = "update kategori set KategoriAdi='$KategoriAdi',  where KategoriId='$KategoriId'";
 
 $result = mysqli_query($conn, $sql);
 

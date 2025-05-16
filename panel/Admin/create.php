@@ -1,9 +1,7 @@
-<?php 
-require_once("../../config/baglan.php");
-
-?>
-
-<form method="post" action="save.php">
+<?php
+ require_once("../../config/baglan.php");
+ ?>
+ <form method="post" action="save.php">
   <div class="form-group row">
     <label for="Kul" class="col-4 col-form-label">Kullanıcı Adını Girin</label> 
     <div class="col-8">
